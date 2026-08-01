@@ -51,7 +51,7 @@ def _simplest_ot():
         http_archive,
         name = "simplest_ot",
         urls = [
-            "https://github.com/secretflow/simplest-ot/archive/60197bc7dad327bb55759e8e854885411e999167.tar.gz",
+            "https://codeload.github.com/secretflow/simplest-ot/tar.gz/60197bc7dad327bb55759e8e854885411e999167",
         ],
         strip_prefix = "simplest-ot-60197bc7dad327bb55759e8e854885411e999167",
         sha256 = "c8816bf147e320f51c516f4c511f2d1a732ac0d0f171d29f442cbe2b5173ddba",
@@ -62,7 +62,7 @@ def _org_interconnection():
         http_archive,
         name = "org_interconnection",
         urls = [
-            "https://github.com/secretflow/interconnection/archive/30e4220b7444d0bb077a9040f1b428632124e31a.tar.gz",
+            "https://codeload.github.com/secretflow/interconnection/tar.gz/30e4220b7444d0bb077a9040f1b428632124e31a",
         ],
         strip_prefix = "interconnection-30e4220b7444d0bb077a9040f1b428632124e31a",
         sha256 = "341f6de0fa7dd618f9723009b9cb5b1da1788aacb9e12acfb0c9b19e5c5a7354",
@@ -94,7 +94,7 @@ def _com_github_brpc_brpc():
             "@yacl//bazel:patches/brpc_m1.patch",
         ],
         urls = [
-            "https://github.com/apache/brpc/archive/refs/tags/1.10.0.tar.gz",
+            "https://codeload.github.com/apache/brpc/tar.gz/refs/tags/1.10.0",
         ],
     )
 
@@ -106,7 +106,7 @@ def _com_github_gflags_gflags():
         sha256 = "34af2f15cf7367513b352bdcd2493ab14ce43692d2dcd9dfc499492966c64dcf",
         type = "tar.gz",
         urls = [
-            "https://github.com/gflags/gflags/archive/v2.2.2.tar.gz",
+            "https://codeload.github.com/gflags/gflags/tar.gz/v2.2.2",
         ],
     )
 
@@ -121,7 +121,7 @@ def _com_github_google_leveldb():
         patch_args = ["-p1"],
         patches = ["@yacl//bazel:patches/leveldb.patch"],
         urls = [
-            "https://github.com/google/leveldb/archive/refs/tags/1.23.tar.gz",
+            "https://codeload.github.com/google/leveldb/tar.gz/refs/tags/1.23",
         ],
     )
 
@@ -134,7 +134,7 @@ def _com_github_madler_zlib():
         sha256 = "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c",
         type = ".tar.gz",
         urls = [
-            "https://github.com/madler/zlib/archive/refs/tags/v1.3.1.tar.gz",
+            "https://codeload.github.com/madler/zlib/tar.gz/refs/tags/v1.3.1",
         ],
     )
 
@@ -160,7 +160,7 @@ def _com_google_absl():
         type = "tar.gz",
         strip_prefix = "abseil-cpp-20240116.2",
         urls = [
-            "https://github.com/abseil/abseil-cpp/archive/refs/tags/20240116.2.tar.gz",
+            "https://codeload.github.com/abseil/abseil-cpp/tar.gz/refs/tags/20240116.2",
         ],
     )
 
@@ -172,7 +172,7 @@ def _com_github_openssl_openssl():
         type = "tar.gz",
         strip_prefix = "openssl-openssl-3.0.12",
         urls = [
-            "https://github.com/openssl/openssl/archive/refs/tags/openssl-3.0.12.tar.gz",
+            "https://codeload.github.com/openssl/openssl/tar.gz/refs/tags/openssl-3.0.12",
         ],
         build_file = "@yacl//bazel:openssl.BUILD",
     )
@@ -185,7 +185,7 @@ def _com_github_fmtlib_fmt():
         sha256 = "1250e4cc58bf06ee631567523f48848dc4596133e163f02615c97f78bab6c811",
         build_file = "@yacl//bazel:fmtlib.BUILD",
         urls = [
-            "https://github.com/fmtlib/fmt/archive/refs/tags/10.2.1.tar.gz",
+            "https://codeload.github.com/fmtlib/fmt/tar.gz/refs/tags/10.2.1",
         ],
     )
 
@@ -198,7 +198,7 @@ def _com_github_gabime_spdlog():
         sha256 = "1586508029a7d0670dfcb2d97575dcdc242d3868a259742b69f100801ab4e16b",
         build_file = "@yacl//bazel:spdlog.BUILD",
         urls = [
-            "https://github.com/gabime/spdlog/archive/refs/tags/v1.14.1.tar.gz",
+            "https://codeload.github.com/gabime/spdlog/tar.gz/refs/tags/v1.14.1",
         ],
     )
 
@@ -210,7 +210,7 @@ def _com_google_googletest():
         type = "tar.gz",
         strip_prefix = "googletest-1.15.0",
         urls = [
-            "https://github.com/google/googletest/archive/refs/tags/v1.15.0.tar.gz",
+            "https://codeload.github.com/google/googletest/tar.gz/refs/tags/v1.15.0",
         ],
     )
 
@@ -222,7 +222,7 @@ def _com_github_google_benchmark():
         strip_prefix = "benchmark-1.8.5",
         sha256 = "d26789a2b46d8808a48a4556ee58ccc7c497fcd4c0af9b90197674a81e04798a",
         urls = [
-            "https://github.com/google/benchmark/archive/refs/tags/v1.8.5.tar.gz",
+            "https://codeload.github.com/google/benchmark/tar.gz/refs/tags/v1.8.5",
         ],
     )
 
@@ -234,7 +234,7 @@ def _com_github_blake3team_blake3():
         sha256 = "ec9114480857334858e73b727199c573bfdbed6138a83be573f076d37e671fc1",
         build_file = "@yacl//bazel:blake3.BUILD",
         urls = [
-            "https://github.com/BLAKE3-team/BLAKE3/archive/refs/tags/1.5.3.tar.gz",
+            "https://codeload.github.com/BLAKE3-team/BLAKE3/tar.gz/refs/tags/1.5.3",
         ],
     )
 
@@ -245,7 +245,7 @@ def _rule_proto():
         sha256 = "dc3fb206a2cb3441b485eb1e423165b231235a1ea9b031b4433cf7bc1fa460dd",
         strip_prefix = "rules_proto-5.3.0-21.7",
         urls = [
-            "https://github.com/bazelbuild/rules_proto/archive/refs/tags/5.3.0-21.7.tar.gz",
+            "https://codeload.github.com/bazelbuild/rules_proto/tar.gz/refs/tags/5.3.0-21.7",
         ],
     )
 
@@ -257,7 +257,7 @@ def _rule_python():
         sha256 = "4912ced70dc1a2a8e4b86cec233b192ca053e82bc72d877b98e126156e8f228d",
         strip_prefix = "rules_python-0.32.2",
         urls = [
-            "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.32.2.tar.gz",
+            "https://codeload.github.com/bazelbuild/rules_python/tar.gz/refs/tags/0.32.2",
         ],
     )
 
@@ -268,7 +268,7 @@ def _rules_foreign_cc():
         sha256 = "b3127e65fc189f28833be0cf64ba8b33b0bbb2707b7d448ba3baba5247a3c9f8",
         strip_prefix = "rules_foreign_cc-5c34b7136f0dec5d8abf2b840796ec8aef56a7c1",
         urls = [
-            "https://github.com/bazelbuild/rules_foreign_cc/archive/5c34b7136f0dec5d8abf2b840796ec8aef56a7c1.tar.gz",
+            "https://codeload.github.com/bazelbuild/rules_foreign_cc/tar.gz/5c34b7136f0dec5d8abf2b840796ec8aef56a7c1",
         ],
     )
 
@@ -298,7 +298,7 @@ def _com_github_microsoft_FourQlib():
         ],
         build_file = "@yacl//bazel:FourQlib.BUILD",
         urls = [
-            "https://github.com/microsoft/FourQlib/archive/1031567f23278e1135b35cc04e5d74c2ac88c029.tar.gz",
+            "https://codeload.github.com/microsoft/FourQlib/tar.gz/1031567f23278e1135b35cc04e5d74c2ac88c029",
         ],
     )
 
@@ -311,7 +311,7 @@ def _com_github_google_cpu_features():
         build_file = "@yacl//bazel:cpu_features.BUILD",
         sha256 = "bdb3484de8297c49b59955c3b22dba834401bc2df984ef5cfc17acbe69c5018e",
         urls = [
-            "https://github.com/google/cpu_features/archive/refs/tags/v0.9.0.tar.gz",
+            "https://codeload.github.com/google/cpu_features/tar.gz/refs/tags/v0.9.0",
         ],
     )
 
@@ -323,7 +323,7 @@ def _com_github_dltcollab_sse2neon():
         strip_prefix = "sse2neon-8df2f48dbd0674ae5087f7a6281af6f55fa5a8e2",
         type = "tar.gz",
         urls = [
-            "https://github.com/DLTcollab/sse2neon/archive/8df2f48dbd0674ae5087f7a6281af6f55fa5a8e2.tar.gz",
+            "https://codeload.github.com/DLTcollab/sse2neon/tar.gz/8df2f48dbd0674ae5087f7a6281af6f55fa5a8e2",
         ],
         build_file = "@yacl//bazel:sse2neon.BUILD",
     )
@@ -340,7 +340,7 @@ def _com_github_libtom_libtommath():
             "@yacl//bazel:patches/libtommath.patch",
         ],
         urls = [
-            "https://github.com/libtom/libtommath/archive/42b3fb07e7d504f61a04c7fca12e996d76a25251.tar.gz",
+            "https://codeload.github.com/libtom/libtommath/tar.gz/42b3fb07e7d504f61a04c7fca12e996d76a25251",
         ],
         build_file = "@yacl//bazel:libtommath.BUILD",
     )
@@ -357,7 +357,7 @@ def _com_github_msgpack_msgpack():
         ],
         patch_args = ["-p1"],
         urls = [
-            "https://github.com/msgpack/msgpack-c/archive/refs/tags/cpp-6.1.0.tar.gz",
+            "https://codeload.github.com/msgpack/msgpack-c/tar.gz/refs/tags/cpp-6.1.0",
         ],
         build_file = "@yacl//bazel:msgpack.BUILD",
     )
@@ -370,7 +370,7 @@ def _com_github_greendow_hash_drbg():
         type = "tar.gz",
         strip_prefix = "Hash-DRBG-2411fa9d0de81c69dce2a48555c30298253db15d",
         urls = [
-            "https://github.com/greendow/Hash-DRBG/archive/2411fa9d0de81c69dce2a48555c30298253db15d.tar.gz",
+            "https://codeload.github.com/greendow/Hash-DRBG/tar.gz/2411fa9d0de81c69dce2a48555c30298253db15d",
         ],
         build_file = "@yacl//bazel:hash_drbg.BUILD",
     )
@@ -387,7 +387,7 @@ def _com_github_herumi_mcl():
         patches = [
             "@yacl//bazel:patches/mcl.patch",
         ],
-        urls = ["https://github.com/herumi/mcl/archive/refs/tags/v1.88.tar.gz"],
+        urls = ["https://codeload.github.com/herumi/mcl/tar.gz/refs/tags/v1.88"],
     )
 
 def _lib25519():

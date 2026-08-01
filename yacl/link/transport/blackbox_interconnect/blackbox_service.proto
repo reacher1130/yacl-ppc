@@ -23,9 +23,10 @@ package blackbox_interconnect;
 option cc_generic_services = true;
 
 message TransportOutbound {
-  bytes payload = 1;   // 二进制报文
-  string code = 2;     // 状态码
-  string message = 3;  // 状态说明
+  map<string, string> metadata = 1;  // 协议类型检查（BFIA 协议跳过 CDR 检查）
+  bytes payload = 2;                 // 二进制报文
+  string code = 3;                   // 状态码
+  string message = 4;                // 状态说明
 }
 
 // request uri:
