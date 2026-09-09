@@ -63,7 +63,7 @@ cat > $@ << EOF
 #ifndef ge25519_sub_h
 #define ge25519_sub_h
 
-#include "ge25519.h"
+#include "crypto_mGnP/ed25519/amd64-maax/ge25519.h"
 
 #define ge25519_sub         CRYPTO_NAMESPACE(ge25519_sub)
 
@@ -102,7 +102,7 @@ cat > $@ << EOF
 #ifndef ge25519_scalarmult_h
 #define ge25519_scalarmult_h
 
-#include "ge25519.h"
+#include "crypto_mGnP/ed25519/amd64-maax/ge25519.h"
 
 #define ge25519_scalarmult         CRYPTO_NAMESPACE(ge25519_scalarmult)
 
@@ -175,7 +175,7 @@ cat > $@ << EOF
 #ifndef ge25519_is_on_curve_h
 #define ge25519_is_on_curve_h
 
-#include "ge25519.h"
+#include "crypto_mGnP/ed25519/amd64-maax/ge25519.h"
 
 #define ge25519_is_on_curve         CRYPTO_NAMESPACE(ge25519_is_on_curve)
 
@@ -263,11 +263,12 @@ cc_library(
         "include-build/crypto_uint64.h",
         "include-build/crypto_verify.h",
     ],
-    hdrs = [
-        "crypto_multiscalar/ed25519/amd64-maax-p3/ge25519_unpack.h",
-        "crypto_multiscalar/ed25519/amd64-maax-p3/sc25519.h",
-        "crypto_nG/merged25519/amd64-maax/fe25519.h",
-        "crypto_nG/merged25519/amd64-maax/ge25519.h",
+    hdrs = glob([
+        "crypto_mGnP/ed25519/amd64-maax/*.h",
+        "crypto_multiscalar/ed25519/amd64-maax-p3/*.h",
+        "crypto_nG/merged25519/amd64-maax/*.h",
+        "crypto_pow/inv25519/amd64-maax/*.h",
+    ]) + [
         "crypto_nG/merged25519/amd64-maax/ge25519_base_niels.data",
         "include-build/ge25519_is_on_curve.h",
         "include-build/ge25519_scalarmult.h",

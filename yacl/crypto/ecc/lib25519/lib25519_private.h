@@ -15,8 +15,10 @@
 #pragma once
 
 extern "C" {
+// Match the p3 ge25519_pack implementation selected in lib25519.BUILD.
+// The variants share GE25519_H, so include this declaration before unpack.h.
+#include "crypto_mGnP/ed25519/amd64-maax/ge25519.h"
 #include "crypto_multiscalar/ed25519/amd64-maax-p3/ge25519_unpack.h"
-#include "crypto_nG/merged25519/amd64-maax/ge25519.h"
 #include "include-build/ge25519_is_on_curve.h"
 #include "include-build/ge25519_scalarmult.h"
 #include "include-build/ge25519_sub.h"
